@@ -28,7 +28,10 @@ CT:
   names: Connecticut
 DC:
   name: "District of Columbia"
-  names: "District of Columbia"
+  names: 
+    - "District of Columbia"
+    - "Washington DC"
+    - "Washington D.C."
 DE:
   name: Delaware
   names: Delaware

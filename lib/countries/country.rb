@@ -50,7 +50,20 @@ class ISO3166::Country
   def currency
     ISO4217::Currency.from_code(@data['currency'])
   end
+  
+  def find_state_abbreviation_by_name(name)
+    # Assumptions:
+    #   Subdividions are keyed by their abbrviation.
+    #   A given subdivision may one more names, stored as a string or array of strings
+    # 
+    # The code below inverts the subdivision hash with the names as keys to return the abbreviation
+    @state_map ||= Hash[*subdivisions.map do |k,v| 
+      v["names"].kind_of?(Array) ? v["names"].map { |n|  [n, k] } : [v["names"], k]
+    end.flatten(2)]
 
+    @state_map[name]
+  end
+  
   def subdivisions
     @subdivisions ||= subdivisions? ? YAML.load_file(File.join(File.dirname(__FILE__), '..', 'data', 'subdivisions', "#{alpha2}.yaml")) : {}
   end

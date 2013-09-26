@@ -92,6 +92,20 @@ describe ISO3166::Country do
     it 'should be available through states' do
       country.states.should have(57).states
     end
+    
+    it 'should find state abbreviation by name' do
+      country.find_state_abbreviation_by_name('Connecticut').should == 'CT'
+    end
+    
+    it 'should find state abbreviation by name with multiple alternatives' do
+      country.find_state_abbreviation_by_name('District of Columbia').should == 'DC'
+      country.find_state_abbreviation_by_name('Washington D.C.').should == 'DC'
+      country.find_state_abbreviation_by_name('Washington DC').should == 'DC'
+    end
+    
+    it 'should return nil if state abbreviation can not be found' do
+      country.find_state_abbreviation_by_name('hello').should be_nil
+    end
   end
 
   describe 'valid?' do
