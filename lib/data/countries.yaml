@@ -96,7 +96,8 @@ AG:
   latitude: "17 03 N"
   longitude: "61 48 W"
   name: "Antigua and Barbuda"
-  names: 
+  names:
+    - "Antigua & Barbuda" 
     - "Antigua and Barbuda"
     - "Antigua und Barbuda"
     - "Antigua et Barbuda"
@@ -2039,6 +2040,7 @@ GB:
   longitude: "2 00 W"
   name: "United Kingdom"
   names: 
+    - "Northern Ireland"
     - "United Kingdom"
     - "GroÃ\u0083Â\u009fbritannien"
     - Royaume-Uni
@@ -3250,6 +3252,7 @@ KR:
   longitude: "127 30 E"
   name: "Korea, Republic of"
   names: 
+    - "South Korea"
     - "Korea (South)"
     - Südkorea
     - "Corée du Sud"
@@ -4428,6 +4431,7 @@ NL:
   longitude: "5 45 E"
   name: Netherlands
   names: 
+    - Holland
     - Netherlands
     - Niederlande
     - Pays-Bas
@@ -6378,6 +6382,7 @@ VI:
   longitude: ""
   name: "Virgin Islands, U.S."
   names: 
+    - "US Virgin Islands"
     - "Virgin Islands of the United States"
     - "Amerikanische Jungferninseln"
     - "Îles Vierges américaines"
