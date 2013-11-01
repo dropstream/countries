@@ -6,6 +6,16 @@ describe ISO3166::Country do
 
   let(:country) { ISO3166::Country.search('US') }
 
+  it 'allows to create a country object from a symbol representation of the alpha2 code' do
+    country = described_class.new(:us)
+    country.data.should_not be_nil
+  end
+
+  it 'allows to create a country object from a lowercase alpha2 code' do
+    country = described_class.new("us")
+    country.data.should_not be_nil
+  end
+
   it 'should return 3166 number' do
     country.number.should == '840'
   end
@@ -23,7 +33,12 @@ describe ISO3166::Country do
   end
 
   it 'should return alternate names' do
-    country.names.should == ["United States of America", "Vereinigte Staaten von Amerika", "États-Unis", "Estados Unidos"]
+    country.names.should == ["United States of America", "Vereinigte Staaten von Amerika", "États-Unis", "Estados Unidos", "アメリカ合衆国", "Verenigde Staten"]
+  end
+
+  it 'should return translations' do
+    country.translations.should be
+    country.translations["en"].should == "United States of America"
   end
 
   it 'should return latitude' do
@@ -32,6 +47,10 @@ describe ISO3166::Country do
 
   it 'should return longitude' do
     country.longitude.should == '97 00 W'
+  end
+
+  it "should return continent" do
+    country.continent.should == "North America"
   end
 
   it 'should return region' do
@@ -86,11 +105,11 @@ describe ISO3166::Country do
     end
 
     it 'should return a hash with all sub divisions' do
-      country.subdivisions.should have(57).states
+      country.subdivisions.should have(60).states
     end
 
     it 'should be available through states' do
-      country.states.should have(57).states
+      country.states.should have(60).states
     end
     
     it 'should find state abbreviation by name' do
@@ -114,7 +133,25 @@ describe ISO3166::Country do
     end
 
     it 'should return false if country is invalid' do
-      ISO3166::Country.new('fubar').should_not be_valid
+      ISO3166::Country.new({}).should_not be_valid
+    end
+  end
+
+  describe 'new' do
+    it 'should return new country object when a valid alpha2 string is passed' do
+      ISO3166::Country.new('US').should be_a(ISO3166::Country)
+    end
+
+    it 'should return nil when an invalid alpha2 string is passed' do
+      ISO3166::Country.new('fubar').should be_nil
+    end
+
+    it 'should return new country object when a valid alpha2 symbol is passed' do
+      ISO3166::Country.new(:us).should be_a(ISO3166::Country)
+    end
+
+    it 'should return nil when an invalid alpha2 symbol is passed' do
+      ISO3166::Country.new(:fubar).should be_nil
     end
   end
 
@@ -123,7 +160,7 @@ describe ISO3166::Country do
       countries = ISO3166::Country.all
       countries.should be_an(Array)
       countries.first.should be_an(Array)
-      countries.should have(246).countries
+      countries.should have(250).countries
     end
 
     it "should allow to customize each country representation passing a block to the method" do
@@ -131,7 +168,7 @@ describe ISO3166::Country do
       countries.should be_an(Array)
       countries.first.should be_an(Array)
       countries.first.should have(3).fields
-      countries.should have(246).countries
+      countries.should have(250).countries
     end
   end
 
@@ -146,16 +183,16 @@ describe ISO3166::Country do
       ISO3166::Country.search('US').should be_a(ISO3166::Country)
     end
 
-    it 'should return false when an invalid alpha2 string is passed' do
-      ISO3166::Country.search('fubar').should be_false
+    it 'should return nil when an invalid alpha2 string is passed' do
+      ISO3166::Country.search('fubar').should be_nil
     end
 
     it 'should return new country object when a valid alpha2 symbol is passed' do
       ISO3166::Country.search(:us).should be_a(ISO3166::Country)
     end
 
-    it 'should return false when an invalid alpha2 symbol is passed' do
-      ISO3166::Country.search(:fubar).should be_false
+    it 'should return nil when an invalid alpha2 symbol is passed' do
+      ISO3166::Country.search(:fubar).should be_nil
     end
   end
 
@@ -189,6 +226,12 @@ describe ISO3166::Country do
         subject { Country.superclass }
 
         it { should == ISO3166::Country }
+      end
+
+      describe 'to_s' do
+        it 'should return the country name' do
+          Country.new('GB').to_s.should == 'United Kingdom'
+        end
       end
     end
   end
@@ -354,6 +397,24 @@ describe ISO3166::Country do
 
     it "should find countries by language" do
       german_speaking_countries.size.should == 6
+    end
+  end
+
+  describe 'in_eu?' do
+    let(:netherlands) { ISO3166::Country.search('NL') }
+
+    it 'should return false for countries without eu_member flag' do
+      country.in_eu?.should be_false
+    end
+
+    it 'should return true for countries with eu_member flag set to true' do
+      netherlands.in_eu?.should be_true
+    end
+  end
+
+  describe 'to_s' do
+    it 'should return the country name' do
+      ISO3166::Country.new('GB').to_s.should == 'United Kingdom'
     end
   end
 
