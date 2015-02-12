@@ -333,6 +333,25 @@ describe ISO3166::Country do
       end
     end
 
+    context "when search name found" do
+      let(:uk) { ISO3166::Country.find_country_by_name("Wales") }
+
+      it "should be a country instance" do
+        uk.should be_a(ISO3166::Country)
+        uk.alpha2.should == "GB"
+      end
+    end
+
+    context "when search name found" do
+      let(:tw) { ISO3166::Country.find_country_by_name("Taiwan") }
+
+      it "should be a country instance" do
+        tw.should be_a(ISO3166::Country)
+        tw.alpha2.should == "TW"
+        tw.name.should == 'Taiwan'
+      end
+    end
+
     context "when search lowercase name found" do
       let(:uk) { ISO3166::Country.find_country_by_name("united kingdom") }
 
