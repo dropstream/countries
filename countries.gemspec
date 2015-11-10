@@ -16,6 +16,7 @@ Gem::Specification.new do |gem|
   gem.version       = Countries::VERSION
 
   gem.add_dependency('currencies', '~> 0.4.2')
+  gem.add_development_dependency 'geminabox', "~> 0.12.4"
   gem.add_development_dependency "rspec"
   gem.add_development_dependency "yard"
 end
