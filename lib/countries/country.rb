@@ -62,9 +62,11 @@ class ISO3166::Country
     # 
     # The code below inverts the subdivision hash with the names as keys to return the abbreviation
     @state_map ||= Hash[*subdivisions.map do |k,v| 
-      v["names"].kind_of?(Array) ? v["names"].map { |n|  [n, k] } : [v["names"], k]
+      names = v["names"].kind_of?(Array) ? v["names"].map { |n|  [n, k] } : [v["names"], k]
+      # Some data lists do not repeat the original name in the names list
+      names + [v['name'], k]
     end.flatten(2)]
-
+    
     @state_map[name]
   end
   

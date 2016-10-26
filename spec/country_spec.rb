@@ -127,6 +127,16 @@ describe ISO3166::Country do
     end
   end
 
+  context 'Canadian subdivisions' do
+    let(:country) { ISO3166::Country.search('CA') }
+
+    it 'should find a canadian abbreviation' do
+      country.find_state_abbreviation_by_name('New Brunswick').should == 'NB'
+      country.find_state_abbreviation_by_name('Ontario').should == 'ON'
+      country.find_state_abbreviation_by_name('Québec').should == 'QC'
+    end
+  end
+
   describe 'valid?' do
     it 'should return true if country is valid' do
       ISO3166::Country.new('US').should be_valid
