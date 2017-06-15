@@ -116,10 +116,20 @@ describe ISO3166::Country do
       country.find_state_abbreviation_by_name('Connecticut').should == 'CT'
     end
     
+    it 'should find state abbreviation by name case-insensitive' do
+      country.find_state_abbreviation_by_name('coNNectiCut').should == 'CT'
+    end
+
     it 'should find state abbreviation by name with multiple alternatives' do
       country.find_state_abbreviation_by_name('District of Columbia').should == 'DC'
       country.find_state_abbreviation_by_name('Washington D.C.').should == 'DC'
       country.find_state_abbreviation_by_name('Washington DC').should == 'DC'
+    end
+
+    it 'should find state abbreviation by name with multiple alternatives case-insensitive' do
+      country.find_state_abbreviation_by_name('DISTRICT OF columbia').should == 'DC'
+      country.find_state_abbreviation_by_name('washington d.c.').should == 'DC'
+      country.find_state_abbreviation_by_name('WASHINGTON DC').should == 'DC'
     end
     
     it 'should return nil if state abbreviation can not be found' do
