@@ -1,193 +1,371 @@
 ---
 AA:
   name: "Armed Forces Americas"
-  names: "Armed Forces Americas"
+  names: 
+    - "Armed Forces Americas"
+    - AA
+    - A.A.
 AE:
   name: "Armed Forces Europe"
-  names: "Armed Forces Europe"
+  names: 
+    - "Armed Forces Europe"
+    - AE
+    - A.E.
 AK:
   name: Alaska
-  names: Alaska
+  names: 
+    - Alaska
+    - A.K.
+    - AK
 AL:
   name: Alabama
-  names: Alabama
+  names: 
+    - Alabama
+    - A.L.
+    - AL
 AP:
   name: "Armed Forces Pacific"
-  names: "Armed Forces Pacific"
+  names: 
+    - "Armed Forces Pacific"
+    - AP
+    - A.P.
 AR:
   name: Arkansas
-  names: Arkansas
+  names: 
+    - Arkansas
+    - A.R.
+    - AR
 AS:
   comments: "see also separate entry under AS"
   name: "American Samoa"
-  names: "American Samoa"
+  names: 
+    - "American Samoa"
+    - AS
+    - A.S.
 AZ:
   name: Arizona
-  names: Arizona
+  names: 
+    - Arizona
+    - A.Z.
+    - AZ
 CA:
   name: California
   names:
     - Californie
     - Kalifornien
     - California
+    - CA
+    - C.A.
 CO:
   name: Colorado
-  names: Colorado
+  names: 
+    - Colorado
+    - CO
+    - C.O.
 CT:
   name: Connecticut
-  names: Connecticut
+  names: 
+    - Connecticut
+    - CT
+    - C.T.
 DC:
   name: "District of Columbia"
   names: 
     - "District of Columbia"
     - "Washington DC"
     - "Washington D.C."
+    - DC
+    - D.C.
 DE:
   name: Delaware
-  names: Delaware
+  names: 
+    - Delaware
+    - DE
+    - D.E.
 FL:
   name: Florida
-  names: Florida
+  names: 
+    - Florida
+    - FL
+    - F.L.
 GA:
   name: Georgia
-  names: Georgia
+  names: 
+    - Georgia
+    - GA
+    - G.A.
 GU:
   comments: "see also separate entry under GU"
   name: Guam
-  names: Guam
+  names: 
+    - Guam
+    - GU
+    - G.U.
 HI:
   name: Hawaii
-  names: Hawaii
+  names: 
+    - Hawaii
+    - HI
+    - H.I.
 IA:
   name: Iowa
-  names: Iowa
+  names: 
+    - Iowa
+    - IA
+    - I.A.
 ID:
   name: Idaho
-  names: Idaho
+  names: 
+    - Idaho
+    - ID
+    - I.D.
 IL:
   name: Illinois
-  names: Illinois
+  names: 
+    - Illinois
+    - IL
+    - I.L.
 IN:
   name: Indiana
-  names: Indiana
+  names: 
+    - Indiana
+    - IN
+    - I.N.
 KS:
   name: Kansas
-  names: Kansas
+  names: 
+    - Kansas
+    - KS
+    - K.S.
 KY:
   name: Kentucky
-  names: Kentucky
+  names: 
+    - Kentucky
+    - KY
+    - K.Y.
 LA:
   name: Louisiana
-  names: Louisiana
+  names: 
+    - Louisiana
+    - LA
+    - L.A.
 MA:
   name: Massachusetts
-  names: Massachusetts
+  names: 
+    - Massachusetts
+    - MA
+    - M.A.
 MD:
   name: Maryland
-  names: Maryland
+  names: 
+    - Maryland
+    - MD
+    - M.D.
 ME:
   name: Maine
-  names: Maine
+  names: 
+    - Maine
+    - ME
+    - M.E.
 MI:
   name: Michigan
-  names: Michigan
+  names: 
+    - Michigan
+    - MI
+    - M.I.
 MN:
   name: Minnesota
-  names: Minnesota
+  names: 
+    - Minnesota
+    - MN
+    - M.N.
 MO:
   name: Missouri
-  names: Missouri
+  names: 
+    - Missouri
+    - MO
+    - M.O.
 MP:
   comment: "see also separate entry under MP"
   name: "Northern Mariana Islands"
-  names: "Northern Mariana Islands"
+  names: 
+    - "Northern Mariana Islands"
+    - MP
+    - M.P.
 MS:
   name: Mississippi
-  names: Mississippi
+  names: 
+    - Mississippi
+    - MS
+    - M.S.
 MT:
   name: Montana
-  names: Montana
+  names: 
+    - Montana
+    - MT
+    - M.T.
 NC:
   name: "North Carolina"
-  names: "North Carolina"
+  names: 
+    - "North Carolina"
+    - NC
+    - N.C.
 ND:
   name: "North Dakota"
-  names: "North Dakota"
+  names: 
+    - "North Dakota"
+    - ND
+    - N.D.
 NE:
   name: Nebraska
-  names: Nebraska
+  names: 
+    - Nebraska
+    - NE
+    - N.E.
 NH:
   name: "New Hampshire"
-  names: "New Hampshire"
+  names: 
+    - "New Hampshire"
+    - NH
+    - N.H.
 NJ:
   name: "New Jersey"
-  names: "New Jersey"
+  names: 
+    - "New Jersey"
+    - NJ
+    - N.J.
 NM:
   name: "New Mexico"
-  names: "New Mexico"
+  names: 
+    - "New Mexico"
+    - NM
+    - N.M.
 NV:
   name: Nevada
-  names: Nevada
+  names: 
+    - Nevada
+    - NV
+    - N.V.
 NY:
   name: "New York"
-  names: "New York"
+  names: 
+    - "New York"
+    - NY
+    - N.Y.
 OH:
   name: Ohio
-  names: Ohio
+  names: 
+    - Ohio
+    - OH
+    - O.H.
 OK:
   name: Oklahoma
-  names: Oklahoma
+  names: 
+    - Oklahoma
+    - OK
+    - O.K.
 OR:
   name: Oregon
-  names: Oregon
+  names: 
+    - Oregon
+    - OR
+    - O.R.
 PA:
   name: Pennsylvania
-  names: Pennsylvania
+  names: 
+    - Pennsylvania
+    - PA
+    - P.A.
 PR:
   comments: "see also separate entry under PR"
   name: "Puerto Rico"
-  names: "Puerto Rico"
+  names: 
+    - "Puerto Rico"
+    - PR
+    - P.R.
 RI:
   name: "Rhode Island"
-  names: "Rhode Island"
+  names: 
+    - "Rhode Island"
+    - RI
+    - R.I.
 SC:
   name: "South Carolina"
-  names: "South Carolina"
+  names: 
+    - "South Carolina"
+    - SC
+    - S.C.
 SD:
   name: "South Dakota"
-  names: "South Dakota"
+  names: 
+    - "South Dakota"
+    - SD
+    - S.D.
 TN:
   name: Tennessee
-  names: Tennessee
+  names: 
+    - Tennessee
+    - TN
+    - T.N.
 TX:
   name: Texas
-  names: Texas
+  names: 
+    - Texas
+    - TX
+    - T.X.
 UM:
   comments: "see also separate entry under UM"
   name: "United States Minor Outlying Islands"
-  names: "United States Minor Outlying Islands"
+  names: 
+    - "United States Minor Outlying Islands"
+    - UM
+    - U.M.
 UT:
   name: Utah
-  names: Utah
+  names: 
+    - Utah
+    - UT
+    - U.T.
 VA:
   name: Virginia
-  names: Virginia
+  names: 
+    - Virginia
+    - VA
+    - V.A.
 VI:
   comments: "see also separate entry under VI"
   name: "Virgin Islands, U.S."
-  names: "Virgin Islands, U.S."
+  names: 
+    - "Virgin Islands, U.S."
+    - VI
+    - V.I.
 VT:
   name: Vermont
-  names: Vermont
+  names: 
+    - Vermont
+    - VT
+    - V.T.
 WA:
   name: Washington
-  names: Washington
+  names: 
+    - Washington
+    - WA
+    - W.A.
 WI:
   name: Wisconsin
-  names: Wisconsin
+  names: 
+    - Wisconsin
+    - WI
+    - W.I.
 WV:
   name: "West Virginia"
-  names: "West Virginia"
+  names: 
+    - "West Virginia"
+    - WV
+    - W.V.
 WY:
   name: Wyoming
-  names: Wyoming
+  names: 
+    - Wyoming
+    - WY
+    - W.Y.

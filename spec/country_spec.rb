@@ -124,6 +124,8 @@ describe ISO3166::Country do
       country.find_state_abbreviation_by_name('District of Columbia').should == 'DC'
       country.find_state_abbreviation_by_name('Washington D.C.').should == 'DC'
       country.find_state_abbreviation_by_name('Washington DC').should == 'DC'
+      country.find_state_abbreviation_by_name('A.K.').should == 'AK'
+      country.find_state_abbreviation_by_name('AK').should == 'AK'
     end
 
     it 'should find state abbreviation by name with multiple alternatives case-insensitive' do
