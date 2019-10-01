@@ -146,6 +146,8 @@ describe ISO3166::Country do
       country.find_state_abbreviation_by_name('New Brunswick').should == 'NB'
       country.find_state_abbreviation_by_name('Ontario').should == 'ON'
       country.find_state_abbreviation_by_name('Québec').should == 'QC'
+      country.find_state_abbreviation_by_name('Yukon').should == 'YT'
+      country.find_state_abbreviation_by_name('Newfoundland').should == 'NL'
     end
   end
 

@@ -14,7 +14,9 @@ NB:
     - Nouveau-Brunswick
 NL:
   name: "Newfoundland and Labrador"
-  names: "Newfoundland and Labrador"
+  names: 
+    - "Newfoundland and Labrador"
+    - "Newfoundland"
 NS:
   name: "Nova Scotia"
   names:
@@ -42,4 +44,7 @@ SK:
   names: Saskatchewan
 YT:
   name: "Yukon Territory"
-  names: "Yukon Territory"
+  names: 
+    - "Yukon Territory"
+    - "Yukon"
+
