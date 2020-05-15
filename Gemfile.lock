@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    countries (0.9.5)
+    countries (0.9.6)
       currencies (~> 0.4.2)
 
 GEM
@@ -51,4 +51,4 @@ DEPENDENCIES
   yard
 
 BUNDLED WITH
-   1.13.6
+   1.17.3

@@ -1,3 +1,23 @@
+language: ruby
+cache: bundler
 rvm:
- - 1.9.3
- - 2.0.0
+ - 2.5.5
+
+ before_install:
+  - TAG=$(git describe --tags)
+  - echo $TAG | tr -d v,V > VERSION
+
+script:
+  - bundle exec rspec --color --format progress spec
+
+deploy:
+  provider: script
+  skip_cleanup: true
+  script: ./deploy.sh push
+  on:
+    tags: true
+
+env:
+  global:
+  # GITHUB_TOKEN
+  - secure: "Q911C/p4orjJPECHL6g7cMgiwkyTXqoqpzYBhB9Q2dWo4hsj/elqf4Wyrb2Q/uXjWj/Acxr6+49XVCEh9v23EV/VPuxEsO732DOVu5A9EDUcLZfKkpvG45Wdi6Qr92+MpSk2w+8fr4qEGBT3OmIw9PCJ/SD71ur9cUYvoAA+VJO7S/Sv+KwrLwlmXFcQg53lHhmAjWqOyu7ewmz3arbkLDwzXPoKEMysjZh3G3qcm1sGTIg8xCokzHTp+2aQLBIfV5FitnRhlJtaLMIhh69Yt/lIDmFdGZo6ltsTi6/rBWdCSop9l+L8AUJlQHF1cydrRVqKv48ZUH0+6ppA4Jl6pR8zapg7Mx8aUcuF6o1CMld4WNrB1qFJrZ7n0PVYXl/OpYJYM3AhC+/s1GPsyrEaRu8jXDWyUCPs09NfgZRIxUL5DzXMGfXmcQPFuLXAEQmRMhezZugFiktXKSTt9dsstbKxoHWZJeJZB1RCcjxve+gOyMHje7za2e1QBG3KlsdHUaTcbriRVwPDv8uOmmpa7LTzPc2xfdVCxmBomh6xmSvJB/NswyGNbrFBE3DnzziJEcwaE9unPlDGyfeyvB/Y1m5GAQUIVn6sWj8HZ9lFus2YhAuaTHKdWo6iniPC2Q9wd2QTrXF1nByICQxu+o2LCr9TRezRrNLQ5MVXh4CU7z0="
